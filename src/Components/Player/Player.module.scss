@@ -1,0 +1,244 @@
+@import "../../styles/variables";
+
+.container_player {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    height: 90px;
+    background-color: $bg-player;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.822);
+}
+
+.player {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    &_songinfo {
+        width: 30%;
+        height: 90px;
+        min-width: 230px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .songinfo {
+        &_picture {
+            width: 56px;
+            height: 56px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &_infos {
+            display: block;
+            h3 {
+                color: $font-color-hover;
+                line-break: anywhere;
+            }
+            p {
+                color: $font-color-default;
+            }
+        }
+        &_icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            span {
+                height: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    stroke: $font-color-default;
+                    width: 16px;
+                    height: auto;
+                    cursor: pointer;
+                }
+            }
+            span:nth-child(2) {
+                svg {
+                    path {
+                        fill: $font-color-default;
+                    }
+                }
+            }
+        }
+    }
+
+    &_controls {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        color: white;
+
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            &_icons {
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                svg {
+                    width: 100%;
+                    height: auto;
+                    cursor: pointer;
+                    path {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &_icons:nth-child(3) {
+                background-color: white;
+                border-radius: 50%;
+                padding: 5px;
+
+                svg {
+                    fill: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+
+            &_time {
+                font-size: 12px;
+                color: $font-color-default;
+            }
+
+            &_progress {
+                max-width: 626px;
+                width: 100%;
+                min-width: 150px;
+                height: 4px;
+                background-color: $font-color-default;
+                border-radius: 4px;
+
+                &:hover .progress--active {
+                    display: flex;
+                }
+
+                .progress--active {
+                    width: 40%;
+                    height: 4px;
+                    border-radius: 4px;
+                    background-color: #1ed760;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    display: none;
+                }
+                .button_action {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &_othercontrols {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30%;
+        color: white;
+        gap: 10px;
+        min-width: 220px;
+
+        &_icons {
+            width: 16px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            svg {
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+                path {
+                    cursor: pointer;
+                }
+            }
+        }
+        &_volum {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            .volum_icon {
+                width: 16px;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                    cursor: pointer;
+
+                    path {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .volum_bar {
+                width: 93px;
+                height: 4px;
+                background-color: $font-color-default;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+
+                &:hover .volum_bar--active {
+                    display: flex;
+                }
+
+                .volum_bar--active {
+                    width: 40%;
+                    height: 4px;
+                    border-radius: 4px;
+                    background-color: #1ed760;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    display: none;
+                }
+                .button_action {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

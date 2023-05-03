@@ -1,0 +1,70 @@
+@import "../../../styles/variables";
+
+.container_songs {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.song {
+    background-color: $bg-cards;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    height: auto;
+    transition: all 0.3s;
+    &:hover {
+        .song_banner_play {
+            bottom: 10px;
+            opacity: 1;
+        }
+    }
+    &_banner {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+       
+        &_play {
+            background-color: #1ed760;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0px;
+            right: 5px;
+            opacity: 0;
+            transition: all 0.4s;
+            cursor: pointer;
+            svg {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                path {
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+
+    &_info {
+        h3 {
+            font-size: 18px;
+        }
+        p {
+            font-size: $font-size-default;
+            color: $font-color-default;
+        }
+    }
+
+    &:hover {
+        background-color: $bg-hover-effect-cards;
+    }
+}

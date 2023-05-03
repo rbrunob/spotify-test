@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $bg-menu-superior;
+    height: 60px;
+    padding: 0 3%;
+    width: auto;
+    
+    &_actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .upgrade {
+            color: $font-color-hover;
+            background-color: transparent;
+            border: 1px solid $font-color-default;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: default;
+        }
+        .upgrade:hover {
+            transform: scale(1.05);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            &_pics {
+                width: 25px;
+                height: auto;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &_username {
+                color: $font-color-hover;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    color: $font-color-hover;
+                    font-weight: bold;
+                    margin: 0 0 0 5px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
